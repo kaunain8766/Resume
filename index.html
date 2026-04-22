@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Resume | Md Kaunain Raza</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:linear-gradient(135deg,#0f172a,#020617);padding:30px}
+body{background:linear-gradient(135deg,#020617,#0f172a);padding:30px}
 
 .resume{
 max-width:1100px;
@@ -17,38 +16,43 @@ margin:auto;
 background:#fff;
 border-radius:15px;
 overflow:hidden;
-box-shadow:0 20px 50px rgba(0,0,0,0.4);
+box-shadow:0 25px 60px rgba(0,0,0,0.5);
 display:grid;
-grid-template-columns:300px 1fr;
+grid-template-columns:280px 1fr;
 }
 
 .sidebar{
 background:#020617;
 color:#e2e8f0;
 padding:30px;
-text-align:center;
 }
-
-
 
 .sidebar h1{
 font-size:22px;
+color:#ffffff;
 margin-bottom:5px;
-color:#22c55e;
 }
 
-.sidebar p{font-size:13px;color:#94a3b8}
+.sidebar p{
+font-size:13px;
+color:#ffffff;
+margin-bottom:10px;
+}
 
 .section-title{
+display:block;
 margin-top:25px;
+margin-bottom:8px;
 border-bottom:2px solid #22c55e;
-display:inline-block;
 padding-bottom:5px;
+font-weight:600;
 }
 
 .contact p{
 font-size:12px;
 margin:6px 0;
+word-break:break-all;
+color:#ffffff;
 }
 
 .skills span{
@@ -56,14 +60,37 @@ display:inline-block;
 background:#22c55e;
 color:#022c22;
 padding:5px 10px;
-margin:5px;
+margin:4px;
 border-radius:20px;
 font-size:11px;
 }
 
-.main{padding:35px}
+.download-btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 14px;
+background:#22c55e;
+color:#022c22;
+text-decoration:none;
+border-radius:6px;
+font-size:12px;
+font-weight:600;
+transition:0.3s;
+}
 
-.section{margin-bottom:25px}
+.download-btn:hover{
+background:#16a34a;
+transform:translateY(-2px);
+}
+
+.main{
+padding:35px;
+background:#ffffff;
+}
+
+.section{
+margin-bottom:30px;
+}
 
 .section h2{
 color:#0f172a;
@@ -88,11 +115,17 @@ line-height:1.7;
 }
 
 .project{
-margin-bottom:12px;
-padding:10px;
-border-left:3px solid #22c55e;
-background:#f8fafc;
-border-radius:5px;
+margin-bottom:15px;
+padding:15px;
+border-left:4px solid #22c55e;
+background:#f1f5f9;
+border-radius:10px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
 
 .tag{
@@ -105,27 +138,20 @@ display:inline-block;
 margin-top:5px;
 }
 
-.download-btn{
-display:inline-block;
-margin-top:15px;
-padding:10px 15px;
-background:#22c55e;
-color:#022c22;
-text-decoration:none;
-border-radius:8px;
-font-size:13px;
-font-weight:600;
-transition:0.3s;
-}
-
-.download-btn:hover{
-transform:scale(1.05);
-box-shadow:0 10px 20px rgba(34,197,94,0.4);
-}
-
 @media(max-width:900px){
 .resume{grid-template-columns:1fr}
+.sidebar{text-align:center}
 }
+
+
+/* Print styles */
+@media print {
+  body { background: #fff; padding: 0; }
+  .resume { box-shadow: none; border-radius: 0; }
+  .sidebar { background: #fff; color: #000; }
+  .sidebar h1, .sidebar p, .contact p, .section-title { color: #000; }
+}
+
 </style>
 </head>
 
@@ -141,11 +167,11 @@ box-shadow:0 10px 20px rgba(34,197,94,0.4);
 <h1>Md Kaunain Raza</h1>
 <p>Cybersecurity SOC</p>
 
-<a href="resume.pdf" class="download-btn" download>Download Resume</a>
+
 
 <div class="section-title">Contact</div>
 <div class="contact">
-<p>📧 </p>2403051050332@paruluniversity.ac.in
+<p>📧 2403051050332@paruluniversity.ac.in</p>
 <p>📍 India</p>
 <p>🌐 github.com/kaunain8766</p>
 </div>
@@ -209,6 +235,11 @@ box-shadow:0 10px 20px rgba(34,197,94,0.4);
 </div>
 
 </div>
+
+<script>
+// Optional: rename document title for PDF
+
+</script>
 
 </body>
 </html>
